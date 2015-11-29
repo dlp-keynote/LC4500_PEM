@@ -4,8 +4,8 @@
 
 ### BEGIN INIT INFO
 # Provides:          lc4500-pem.sh
-# Required-Start:    $local_fs cron
-# Required-Stop:     $local_fs
+# Required-Start:    $remote_fs cron
+# Required-Stop:     $remote_fs
 # Default-Start:     1 2 3 4 5
 # Default-Stop:      0 6
 # Short-Description: Start LC4500 application at boot time
@@ -25,7 +25,7 @@ start|reload|force-reload|restart)
 	if test -f /usr/bin/lc4500_main; then
 		echo "LC4500-PEM application found and launching ..... "
 #                nice --adjustment=-10 /usr/bin/lc4500_main &
-                 start-stop-daemon -P other:10 --start -m --pidfile /var/run/lc4500.pid --name lc4500 --exec /usr/bin/lc4500_main -b 
+                 start-stop-daemon  -C -I real-time --start -m --pidfile /var/run/lc4500.pid --name lc4500 --exec /usr/bin/lc4500_main -b > /var/log/lc4500.log
 		
 	fi 
 
