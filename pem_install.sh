@@ -1,5 +1,5 @@
 #!/bin/bash
-# Last update:  11/20/2015 (AJK)
+# Last update:  11/30/2015 
 #
 #    This script is designed to be ran on the BB from the directory where the install files are located.
 # This means that the user has already pulled a copy of the install files (including this script)
@@ -31,7 +31,7 @@ cp $cur_dir/StartupScripts/dbus .
 cp $cur_dir/StartupScripts/rsync .
 cp $cur_dir/StartupScripts/udhcpd .
 cp $cur_dir/StartupScripts/lc4500-pem.sh .
-sudo update-rc.d lc4500-pem.sh start 1 2 3 4 5 . stop 0 6 .
+sudo update-rc.d lc4500-pem.sh start 10 1 2 3 4 5 . stop 0 0 6 .
 
 echo ========= Installing Device Tree Overlays  =============
 echo "Updating Device Tree Overlay files...."
