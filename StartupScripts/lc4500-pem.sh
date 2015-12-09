@@ -22,6 +22,12 @@ test -x /usr/bin/lc4500_main || exit 0
 case "$1" in
 start|reload|force-reload|restart)
 
+	if test -f /var/tmp/ctemp; then
+                echo "Updating LC4500-PEM application ..."
+		cp /usr/bin/lc4500_main /var/tmp/lc4500_main.old
+		cp /var/tmp/ctemp /usr/bin/lc4500_main
+		rm -f /var/tmp/ctemp 
+	fi
 	if test -f /usr/bin/lc4500_main; then
 		echo "LC4500-PEM application found and launching ..... "
 #                nice --adjustment=-10 /usr/bin/lc4500_main &

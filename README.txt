@@ -1,9 +1,9 @@
 /*******************************************************************
 * Important information
 *
-* Last updated: 11/30/2015
+* Last updated: 12/08/2015
 *
-* Version 0.53 (Beta)
+* Version 0.54 (Beta)
 *
 * Keynote Photonics
 *
