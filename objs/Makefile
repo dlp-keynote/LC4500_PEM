@@ -7,7 +7,6 @@ APPOBJS     = 	lc4500_main.o 	\
                 hid.o \
 		ads1255.o 		\
 		dlpspectro.o 	\
-		API.o \
 		BMPParser.o 	\
 		firmware.o 		\
 		Display.o 		\
