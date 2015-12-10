@@ -5,9 +5,9 @@ all: lc4500_main
 APPOBJS     = 	lc4500_main.o 	\
                 usb.o \
                 hid.o \
-		API.o 			\
 		ads1255.o 		\
 		dlpspectro.o 	\
+		API.o \
 		BMPParser.o 	\
 		firmware.o 		\
 		Display.o 		\
@@ -27,6 +27,7 @@ APPOBJS     = 	lc4500_main.o 	\
 		DLPC350.o 		\
 		drm_buff.o 		\
 		Spectra4500.o 	\
+		UpdateApp.o \
 		LC4500IIC.o  
 
 
