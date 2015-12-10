@@ -91,6 +91,11 @@ if [ -s /etc/init.d/lc45000-pem.sh ] ; then
 fi
 
 sudo cp lc4500_main /usr/bin
+if [ -d /opt/lc4500pem ] ; then
+    echo "Solution directory exits"
+else
+    sudo mkdir /opt/lc4500pem
+fi
 
 if [ -s /usr/bin/lc4500_main ] ; then
    echo "Installation Successfull. Rebooting ..."
